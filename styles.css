@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Slab', serif;
+}
+
+body {
+    font-weight: 300;
+    background-color: rgb(255, 251, 247);
+    color: #222;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+}
+
+
+.header {   
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 60px;
+    font-weight: 500;
+    border-bottom: 2px solid #333;
+}
+
+.centered-box {   
+    height: 45vh;
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.num-paragraph {   
+    height: 33.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 85px;
+}
+
+
+.plus-minus-btn {   
+    height: 22.3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    height: 68px;
+    width: 68px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+    font-weight: 100;
+    transition: background-color 0.3s;
+    border-radius: 15px;
+}
+
+#minus {
+    padding-top: -10px;
+    padding-bottom: 10px;
+}
+
+#plus {
+    padding-top: -2px;
+    padding-bottom: 2px;
+}
+
+#plus, 
+#minus,
+#plus:focus,
+#minus:focus {
+    border: none;
+    font-size: 120px;
+    font-weight: 100;
+    outline: none;
+    background-color: transparent;
+}
+
+.btn:last-child:hover {
+    background-color:rgb(115, 247, 192);
+}
+
+.btn:first-child:hover {
+    background-color:rgb(245, 119, 119);
+}
+
+
+.btn:first-child:active {
+    background-color: rgb(245, 119, 119);
+}
+
+.btn:last-child:active {
+    background-color: rgb(84, 252, 182);
+}
+
+.reset-btn:active {
+    background-color: rgb(247, 190, 84);
+}
+
+
+.reset-btn-box {   
+    height: 70.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-btn {    
+    height: 90px;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 10px;
+    transition: background-color 0.4s;
+    border-radius: 13px;
+    padding-top: 9px;
+    padding-bottom: -9px;
+    padding-left: 10px;
+    padding-right: -10px;
+}
+
+.reset-btn:hover {
+    background-color: rgb(238, 194, 113);
+}
+
+
+/* iPhone */
+
+@media only screen and (max-width: 400px) {
+    .centered-box {
+        width: 320px;
+    }
+
+}
+
+@media only screen and (min-width: 400px) and (max-width: 700px) {
+    .centered-box {
+        width: 400px;
+    }
+
+}
+
