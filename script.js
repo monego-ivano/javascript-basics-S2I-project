@@ -20,14 +20,7 @@ resetBtn.addEventListener('click', () => {
 });
 
 plusBtn.addEventListener('click', function () {
-    if (counter.textContent == 0) {
-        minusBtn.disabled = true;
-    } else {
-        minusBtn.disabled = false;
-    }
-});
-
-minusBtn.addEventListener('click', function () {
+    counter.textContent = Number(counter.textContent) + 1;
     if (counter.textContent == 0) {
         minusBtn.disabled = true;
     } else {
