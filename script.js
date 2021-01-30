@@ -24,5 +24,13 @@ plusBtn.addEventListener('click', function () {
         minusBtn.disabled = true;
     } else {
         minusBtn.disabled = false;
-    } 
+    }
 });
+
+minusBtn.addEventListener('click', function () {
+    if (counter.textContent == 0) {
+        minusBtn.disabled = true;
+    } else {
+        minusBtn.disabled = false;
+    }
+}); 
