@@ -20,10 +20,6 @@ resetBtn.addEventListener('click', () => {
 });
 
 plusBtn.addEventListener('click', function () {
-    counter.textContent = Number(counter.textContent) + 1;
-});
-
-plusBtn.addEventListener('click', function () {
     if (counter.textContent == 0) {
         minusBtn.disabled = true;
     } else {
