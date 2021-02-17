@@ -1,36 +1,31 @@
-let counter = document.querySelector('.par');
-const minusBtn = document.querySelector('#minus');
-const plusBtn = document.querySelector('.plus');
-const resetBtn = document.querySelector('.reset-btn');
-const btns = document.querySelectorAll('.btn');
+const counter = $('.par');
+const minusBtn = $('#minus');
+const plusBtn = $('.plus');
+const resetBtn = $('.reset-btn');
+const btns = $('.btn');
 
-minusBtn.disabled = true;
+minusBtn.prop('disabled', true);
 
-plusBtn.addEventListener('click', function () {
-    counter.textContent = Number(counter.textContent) + 1;
+plusBtn.on('click', function () {
+    counter.text(Number(counter.text()) + 1);
+    if (counter.text() == 0) {
+        minusBtn.prop('disabled', true);
+    } else {
+        minusBtn.prop('disabled', false);
+    }
 });
 
-minusBtn.addEventListener('click', function () {
-    counter.textContent = Number(counter.textContent) - 1;
+minusBtn.on('click', function () {
+    counter.text(Number(counter.text()) - 1);
+    if (counter.text() == 0) {
+        minusBtn.prop('disabled', true);
+    } else {
+        minusBtn.prop('disabled', false);
+    }
 });
 
-resetBtn.addEventListener('click', () => {
+resetBtn.on('click', () => {
     counter.textContent = 0
     minusBtn.disabled = true;
 });
 
-plusBtn.addEventListener('click', function () {
-    if (counter.textContent == 0) {
-        minusBtn.disabled = true;
-    } else {
-        minusBtn.disabled = false;
-    }
-});
-
-minusBtn.addEventListener('click', function () {
-    if (counter.textContent == 0) {
-        minusBtn.disabled = true;
-    } else {
-        minusBtn.disabled = false;
-    }
-}); 
