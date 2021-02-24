@@ -25,7 +25,7 @@ minusBtn.on('click', function () {
 });
 
 resetBtn.on('click', () => {
-    counter.textContent = 0
+    counter.text() = 0
     minusBtn.disabled = true;
 });
 
